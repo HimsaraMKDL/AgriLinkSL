@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "542500285705",
+    "project_id": "agrilinksl",
+    "storage_bucket": "agrilinksl.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542500285705:android:6d50bb9e309422b2feb7d8",
+        "android_client_info": {
+          "package_name": "com.example.agrilinksl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLKNGxS_PeJjBiox-eZNLbvM6QFvN2isk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

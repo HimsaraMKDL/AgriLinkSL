@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/main"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:background="#F7F9F5">
+
+
+
+    <androidx.core.widget.NestedScrollView
+
+        android:id="@+id/scrollBuyerHome"
+
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+
+        android:fillViewport="true"
+
+        android:clipToPadding="false"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintBottom_toTopOf="@id/buyerBottomNavigation"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:paddingStart="20dp"
+
+            android:paddingEnd="20dp"
+
+            android:paddingTop="22dp"
+
+            android:paddingBottom="28dp">
+
+
+
+            <!-- Greeting -->
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+
+                        android:id="@+id/tvBuyerGreeting"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="Good Morning, Nimal 👋"
+
+                        android:textColor="#1F2937"
+
+                        android:textSize="21sp"
+
+                        android:textStyle="bold" />
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="2dp"
+
+                        android:text="Discover fresh produce from local farmers"
+
+                        android:textColor="#6B7280"
+
+                        android:textSize="12sp" />
+
+
+
+                </LinearLayout>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:id="@+id/cardBuyerNotification"
+
+                    android:layout_width="46dp"
+
+                    android:layout_height="46dp"
+
+                    app:cardBackgroundColor="#FFFFFF"
+
+                    app:cardCornerRadius="23dp"
+
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="#E5E7EB"
+
+                    app:strokeWidth="1dp">
+
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+
+                        android:text="🔔"
+
+                        android:textSize="20sp" />
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </LinearLayout>
+
+
+
+            <!-- Search -->
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/layoutBuyerSearch"
+
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+
+                app:boxCornerRadiusTopStart="16dp"
+
+                app:boxCornerRadiusTopEnd="16dp"
+
+                app:boxCornerRadiusBottomStart="16dp"
+
+                app:boxCornerRadiusBottomEnd="16dp"
+
+                app:boxStrokeColor="#E5E7EB"
+
+                app:startIconDrawable="@android:drawable/ic_menu_search">
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/etBuyerSearch"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:hint="Search products or local farmers..."
+
+                    android:singleLine="true"
+
+                    android:textSize="13sp" />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <!-- Categories -->
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="18dp"
+
+                android:text="Categories"
+
+                android:textColor="#1F2937"
+
+                android:textSize="15sp"
+
+                android:textStyle="bold" />
+
+
+
+            <HorizontalScrollView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+
+                android:scrollbars="none">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+
+
+                    <com.google.android.material.button.MaterialButton
+
+                        android:id="@+id/btnCategoryVegetables"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="44dp"
+
+                        android:text="🥬 Vegetables"
+
+                        android:textAllCaps="false"
+
+                        android:textColor="#FFFFFF"
+
+                        android:textStyle="bold"
+
+                        android:backgroundTint="#2E7D32"
+
+                        app:cornerRadius="12dp" />
+
+
+
+                    <com.google.android.material.button.MaterialButton
+
+                        android:id="@+id/btnCategoryFruits"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="44dp"
+
+                        android:layout_marginStart="8dp"
+
+                        android:text="🍎 Fruits"
+
+                        android:textAllCaps="false"
+
+                        android:textColor="#1F2937"
+
+                        android:backgroundTint="#FFFFFF"
+
+                        app:cornerRadius="12dp" />
+
+
+
+                    <com.google.android.material.button.MaterialButton
+
+                        android:id="@+id/btnCategoryRice"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="44dp"
+
+                        android:layout_marginStart="8dp"
+
+                        android:text="🌾 Rice"
+
+                        android:textAllCaps="false"
+
+                        android:textColor="#1F2937"
+
+                        android:backgroundTint="#FFFFFF"
+
+                        app:cornerRadius="12dp" />
+
+
+
+                    <com.google.android.material.button.MaterialButton
+
+                        android:id="@+id/btnCategorySpices"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="44dp"
+
+                        android:layout_marginStart="8dp"
+
+                        android:text="🌶 Spices"
+
+                        android:textAllCaps="false"
+
+                        android:textColor="#1F2937"
+
+                        android:backgroundTint="#FFFFFF"
+
+                        app:cornerRadius="12dp" />
+
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+
+
+            <!-- Nearby Farmers Header -->
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="18dp"
+
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+
+
+                <TextView
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:text="Nearby Farmers"
+
+                    android:textColor="#1F2937"
+
+                    android:textSize="15sp"
+
+                    android:textStyle="bold" />
+
+
+
+                <TextView
+
+                    android:id="@+id/tvSeeAllFarmers"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="See All"
+
+                    android:textColor="#F59E0B"
+
+                    android:textSize="12sp"
+
+                    android:textStyle="bold"
+
+                    android:clickable="true"
+
+                    android:focusable="true" />
+
+
+
+            </LinearLayout>
+
+
+
+            <!-- Farmer Container (Dynamic) -->
+
+            <LinearLayout
+
+                android:id="@+id/containerNearbyFarmers"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="9dp"
+
+                android:orientation="vertical">
+
+
+
+                <!-- Farmer cards added dynamically from Firestore -->
+
+
+
+            </LinearLayout>
+
+
+
+            <!-- Popular Products Header -->
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+
+
+                <TextView
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:text="Popular Products"
+
+                    android:textColor="#1F2937"
+
+                    android:textSize="15sp"
+
+                    android:textStyle="bold" />
+
+
+
+                <TextView
+
+                    android:id="@+id/tvExploreProducts"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Explore"
+
+                    android:textColor="#2E7D32"
+
+                    android:textSize="12sp"
+
+                    android:textStyle="bold"
+
+                    android:clickable="true"
+
+                    android:focusable="true" />
+
+
+
+            </LinearLayout>
+
+
+
+            <!-- Dynamic Products Area -->
+
+            <HorizontalScrollView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="9dp"
+
+                android:scrollbars="none">
+
+
+
+                <LinearLayout
+
+                    android:id="@+id/containerBuyerProducts"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+
+
+                    <!-- Firestore products are added dynamically -->
+
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <!-- Bottom Navigation -->
+
+    <LinearLayout
+
+        android:id="@+id/buyerBottomNavigation"
+
+        android:layout_width="0dp"
+
+        android:layout_height="76dp"
+
+        android:background="#FFFFFF"
+
+        android:elevation="8dp"
+
+        android:gravity="center"
+
+        android:orientation="horizontal"
+
+        android:weightSum="4"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+        <LinearLayout
+
+            android:id="@+id/navBuyerHome"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="🏡"
+
+                android:textSize="19sp" />
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="Home"
+
+                android:textColor="#2E7D32"
+
+                android:textSize="10sp"
+
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:id="@+id/navBuyerMarketplace"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:orientation="vertical"
+
+            android:clickable="true"
+
+            android:focusable="true">
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="🛒"
+
+                android:textSize="19sp" />
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="Marketplace"
+
+                android:textColor="#9CA3AF"
+
+                android:textSize="10sp" />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:id="@+id/navBuyerOrders"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:orientation="vertical"
+
+            android:clickable="true"
+
+            android:focusable="true">
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="📦"
+
+                android:textSize="19sp" />
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="Orders"
+
+                android:textColor="#9CA3AF"
+
+                android:textSize="10sp" />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:id="@+id/navBuyerProfile"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:orientation="vertical"
+
+            android:clickable="true"
+
+            android:focusable="true">
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="👤"
+
+                android:textSize="19sp" />
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="Profile"
+
+                android:textColor="#9CA3AF"
+
+                android:textSize="10sp" />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
